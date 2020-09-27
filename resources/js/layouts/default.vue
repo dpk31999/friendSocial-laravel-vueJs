@@ -1,6 +1,6 @@
 <template>
   <div class="main-layout">
-    <navbar />
+    <navbar v-if="authenticated" />
 
     <div class="container mt-4">
       <child />
@@ -10,12 +10,17 @@
 
 <script>
 import Navbar from '~/components/Navbar'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'MainLayout',
 
   components: {
     Navbar
-  }
+  },
+
+  computed: mapGetters({
+    authenticated: 'auth/check'
+  })
 }
 </script>

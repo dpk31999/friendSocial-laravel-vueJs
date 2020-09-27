@@ -8,3 +8,6 @@ export const UPDATE_USER = 'UPDATE_USER'
 
 // lang.js
 export const SET_LOCALE = 'SET_LOCALE'
+
+// profile.js
+export const FETCH_PROFILE = 'FETCH_PROFILE'

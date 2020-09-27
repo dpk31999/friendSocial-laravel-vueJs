@@ -20,15 +20,18 @@
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "js-cookie": "^2.2.0",
+    "luxon": "^1.25.0",
     "popper.js": "^1.15.0",
     "sweetalert2": "^8.10.0",
     "vform": "^1.0.0",
     "vue": "^2.6.10",
+    "vue-datetime": "^1.0.0-beta.14",
     "vue-i18n": "^8.11.2",
     "vue-meta": "^1.6.0",
     "vue-router": "^3.0.6",
     "vuex": "^3.1.0",
-    "vuex-router-sync": "^5.0.0"
+    "vuex-router-sync": "^5.0.0",
+    "weekstart": "^1.0.1"
   },
   "devDependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",

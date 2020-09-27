@@ -7,12 +7,14 @@ import App from '~/components/App'
 import '~/plugins'
 import '~/components'
 
+window.axios = require('axios');
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  i18n,
-  store,
-  router,
-  ...App
+    i18n,
+    store,
+    router,
+    ...App
 })

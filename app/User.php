@@ -19,7 +19,7 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name','username', 'email', 'password','country','city','date_of_birth','status','url_avatar','phone','link_fb'
     ];
 
     /**
@@ -45,22 +45,9 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
      *
      * @var array
      */
-    protected $appends = [
-        'photo_url',
-    ];
 
     /**
-     * Get the profile photo URL attribute.
-     *
-     * @return string
-     */
-    public function getPhotoUrlAttribute()
-    {
-        return 'https://www.gravatar.com/avatar/'.md5(strtolower($this->email)).'.jpg?s=200&d=mm';
-    }
-
-    /**
-     * Get the oauth providers.
+     * Get the oauth providers. 
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -104,5 +91,37 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    // relationship
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function friendRequest()
+    {
+        return $this->belongsToMany(User::class,Friend::class,'from','to')->wherePivot('status','=', 1);    
+    }
+
+    public function friendAccept()
+    {
+        return $this->belongsToMany(User::class,Friend::class,'to','from')->wherePivot('status','=', 1);
+    }
+
+    public function requestFriend()
+    {
+        return $this->belongsToMany(User::class,Friend::class,'from','to')->wherePivot('status','=', 0);
+    }
+
+    public function inviteFriend()
+    {
+        return $this->belongsToMany(User::class,Friend::class,'to','from')->wherePivot('status','=', 0);
+    }
+
+    public function interests()
+    {
+        return $this->belongstoMany(Interest::class);
     }
 }

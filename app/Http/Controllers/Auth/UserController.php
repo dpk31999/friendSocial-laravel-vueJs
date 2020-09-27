@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
@@ -16,5 +17,11 @@ class UserController extends Controller
     public function current(Request $request)
     {
         return response()->json($request->user());
+    }
+
+    public function show($username)
+    {
+        $user = User::where('username',$username)->firstOrFail();
+        return response()->json($user);
     }
 }

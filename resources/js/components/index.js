@@ -7,13 +7,13 @@ import { HasError, AlertError, AlertSuccess } from 'vform'
 
 // Components that are registered globaly.
 [
-  Card,
-  Child,
-  Button,
-  Checkbox,
-  HasError,
-  AlertError,
-  AlertSuccess
+    Card,
+    Child,
+    Button,
+    Checkbox,
+    HasError,
+    AlertError,
+    AlertSuccess,
 ].forEach(Component => {
-  Vue.component(Component.name, Component)
+    Vue.component(Component.name, Component)
 })

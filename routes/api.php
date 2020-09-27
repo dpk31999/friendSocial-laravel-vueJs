@@ -17,6 +17,24 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('logout', 'Auth\LoginController@logout');
 
     Route::get('/user', 'Auth\UserController@current');
+    Route::get('/show/{username}', 'Auth\UserController@show');
+
+    Route::get('/posts/{username}','PostController@getByUsername');
+    Route::resource('posts', 'PostController');
+    
+    Route::get('/friends/{user}', 'FriendController@getFriend');
+    Route::get('/friends/request/{user}','FriendController@getRequest');
+    Route::post('/friends/{id}','FriendController@updateStatusFriend');
+    Route::get('/friends/status/{username}', 'FriendController@getStatusFriend');
+    Route::get('/friends/count/{username}', 'FriendController@getCountFriend');
+
+    Route::get('/posts/friend/{user}', 'PostController@getPostFriend');
+
+    Route::get('/interests/people/{user}', 'InterestController@getPeople');
+    Route::get('/interests','InterestController@index');
+    Route::get('/interests/{user}', 'InterestController@showId');
+    Route::get('/interests/name/{username}','InterestController@show');
+    Route::put('/interests/{user}', 'InterestController@update');
 
     Route::patch('settings/profile', 'Settings\ProfileController@update');
     Route::patch('settings/password', 'Settings\PasswordController@update');
