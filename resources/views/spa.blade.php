@@ -15,6 +15,7 @@ $config = [
   <title>{{ config('app.name') }}</title>
 
   <link rel="stylesheet" href="{{ asset('dist/css/app.css') }}">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
 </head>
 <body>
   <div id="app"></div>
