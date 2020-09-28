@@ -14,8 +14,7 @@ $config = [
 
   <title>{{ config('app.name') }}</title>
 
-  <link rel="stylesheet" href="{{ asset('dist/css/app.css') }}">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+  <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
 </head>
 <body>
   <div id="app"></div>
@@ -26,6 +25,6 @@ $config = [
   </script>
 
   {{-- Load the application scripts --}}
-  <script src="{{ asset('dist/js/app.js') }}"></script>
+  <script src="{{ mix('dist/js/app.js') }}"></script>
 </body>
 </html>
