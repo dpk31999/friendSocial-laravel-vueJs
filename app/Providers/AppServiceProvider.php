@@ -18,10 +18,6 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->runningUnitTests()) {
             Schema::defaultStringLength(191);
         }
-
-        $this->app->bind('path.public', function() {
-            return base_path().'/../public_html';
-        });
     }
 
     /**
