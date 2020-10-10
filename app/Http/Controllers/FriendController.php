@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Friend;
+use App\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -94,13 +95,23 @@ class FriendController extends Controller
         return response()->json($count, 200);
     }
 
-    public function getFriend(User $user)
+    public function getFriend(User $user,Request $request   )
     {
         $friendRequest = $user->friendRequest;
 
         $friendAccept = $user->friendAccept;
 
         $friends = $friendRequest->merge($friendAccept);
+
+        foreach($friends as $friend)
+        {
+            $unread = Message::where([
+                'from' => $friend->id,
+                'to' => $request->user()->id,
+                'is_read' => '0'
+            ])->get()->count();
+            $friend->unread = $unread;
+        }
 
         return response()->json($friends, 200);
     }

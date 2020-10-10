@@ -16,7 +16,7 @@ import Welcome from '../components/Welcome'
 import Home from '../components/Home'
 
 export default {
-  // middleware: 'auth',
+  middleware: 'auth',
   metaInfo(){
     return {title : "Home"}
   },

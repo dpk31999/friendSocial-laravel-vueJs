@@ -8,7 +8,15 @@ export default [
 
     { path: '/login', name: 'login', component: page('auth/login.vue') },
     { path: '/register', name: 'register', component: page('auth/register.vue') },
-    { path: '/message', name: 'message', component: page('message/index.vue') },
+    {
+        path: '/message',
+        name: 'message',
+        component: page('message/index.vue'),
+        children: [
+            { path: '', redirect: { name: 'message.user', params: { username: 'cutevl' } } },
+            { path: 't/:username', name: 'message.user', component: page('message/user.vue') },
+        ]
+    },
     { path: '/notification', name: 'notification', component: page('notification/index.vue') },
     { path: '/password/reset', name: 'password.request', component: page('auth/password/email.vue') },
     { path: '/password/reset/:token', name: 'password.reset', component: page('auth/password/reset.vue') },
