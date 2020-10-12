@@ -1,9 +1,8 @@
-@php
+<?php
 $config = [
     'appName' => config('app.name'),
 ];
-@endphp
-<!DOCTYPE html>
+?>
 <html>
 <head>
   <meta charset="utf-8">
