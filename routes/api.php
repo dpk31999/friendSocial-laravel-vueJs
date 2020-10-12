@@ -37,6 +37,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::put('/interests/{user}', 'InterestController@update');
 
     Route::patch('settings/profile', 'Settings\ProfileController@update');
+    Route::post('settings/profile/avatar', 'Settings\ProfileController@updateAva');
     Route::patch('settings/password', 'Settings\PasswordController@update');
 
     Route::get('/messages/from/{username}','MessageController@getMessage');

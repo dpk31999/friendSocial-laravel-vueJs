@@ -1,19 +1,17 @@
 @php
 $config = [
     'appName' => config('app.name'),
-    'locale' => $locale = app()->getLocale(),
-    'locales' => config('app.locales'),
-    'githubAuth' => config('services.github.client_id'),
 ];
 @endphp
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>{{ config('app.name') }}</title>
 
+  <link rel="icon" href="https://img.icons8.com/offices/50/000000/add-user-group-man-man.png"> 
   <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
 </head>
 <body>
