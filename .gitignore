@@ -14,4 +14,4 @@ npm-debug.log
 yarn-error.log
 phpunit.dusk.xml
 *.code-workspace
-public/mix-manifest.json
+# public/mix-manifest.json

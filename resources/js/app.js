@@ -4,6 +4,7 @@ import router from '~/router'
 import i18n from '~/plugins/i18n'
 import App from '~/components/App'
 import Echo from "laravel-echo"
+import '@trevoreyre/autocomplete-vue/dist/style.css'
 
 import '~/plugins'
 import '~/components'

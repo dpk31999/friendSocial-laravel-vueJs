@@ -3,6 +3,7 @@ $config = [
     'appName' => config('app.name'),
 ];
 ?>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">

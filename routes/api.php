@@ -42,6 +42,8 @@ Route::group(['middleware' => 'auth:api'], function () {
 
     Route::get('/messages/from/{username}','MessageController@getMessage');
     Route::post('/messages','MessageController@store');
+
+    Route::post('/search', 'UserController@searchUser');
 });
 
 Route::group(['middleware' => 'guest:api'], function () {
