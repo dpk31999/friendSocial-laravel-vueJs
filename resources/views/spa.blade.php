@@ -1,6 +1,8 @@
 <?php
 $config = [
     'appName' => config('app.name'),
+    'locale' => $locale = app()->getLocale(),
+    'locales' => config('app.locales'),
 ];
 ?>
 <!DOCTYPE html>
@@ -13,6 +15,7 @@ $config = [
 
   <link rel="icon" href="https://img.icons8.com/offices/50/000000/add-user-group-man-man.png"> 
   <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
+  
 </head>
 <body>
   <div id="app"></div>
@@ -24,6 +27,5 @@ $config = [
 
   {{-- Load the application scripts --}}
   <script src="{{ mix('dist/js/app.js') }}"></script>
- 
 </body>
 </html>

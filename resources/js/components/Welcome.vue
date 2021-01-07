@@ -1,11 +1,8 @@
 <template>
     <div class="container" style="position: relative">
-        <div class="img d-none d-sm-block" style="position: absolute;top: 95px;left: 314px;z-index: 1;">
-            <img id="imageChange" src="https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg" alt="">
-        </div>
         <div class="row">
-            <div class="col-sm-6 d-none d-sm-block" style="padding: 0 15%">
-                <img src="https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png" width="450" height="610" alt="">
+            <div class="col-sm-6 d-none mr-4 d-sm-block" style="padding: 0 15%">
+                <img src="https://www.mynameart.com/pics/i-love-my-best-friends-with-friend-name.jpg" width="450" height="610" alt="">
             </div>
             <div class="col-sm-4 ml-4 mt-5">
                 <div class="top border bg-white d-flex flex-column justify-content-center">

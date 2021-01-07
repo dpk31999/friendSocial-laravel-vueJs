@@ -8,5 +8,4 @@ class Friend extends Model
 {
     protected $fillable = ['from','to','status'];
 
-    
 }

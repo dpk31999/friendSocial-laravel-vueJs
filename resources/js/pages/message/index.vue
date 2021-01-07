@@ -165,6 +165,7 @@ li {
 
 .media-left img {
     width: 64px;
+    height: 64px;
     border-radius: 64px;
     border: 0.5px solid blueviolet;
 }
