@@ -30,7 +30,7 @@
                                 </div>
                             </div>
                             <div class="fb d-flex justify-content-center">
-                                <a href="/jaja" class="text-decoration-none"><p>Log in with Facebook</p></a>
+                                <a class="text-decoration-none" @click="AuthProvider('facebook')" style="cursor : pointer;font-weight: bold"><p>Log in with Facebook</p></a>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <router-link class="text-forgot-password text-dark text-decoration-none" :to="{ name: 'password.request'}">Forgot your password</router-link>
@@ -77,7 +77,34 @@ export default {
 
       // Redirect home.
       this.$router.push({ name: 'home' })
-    }
+    },
+
+    AuthProvider(provider) {
+
+        var self = this
+
+        this.$auth.authenticate(provider)
+        .then(response =>{
+            
+        self.SocialLogin(provider,response)
+
+        })
+        .catch(err => {
+            console.log({err:err})
+        })
+
+    },
+
+    SocialLogin(provider,response){
+
+        this.$http.post('/sociallogin/'+provider,response).then(response => {
+
+            console.log(response.data)
+
+        }).catch(err => {
+            console.log({err:err})
+        })
+    },
   }
 }
 </script>

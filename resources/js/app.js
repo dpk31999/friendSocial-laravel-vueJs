@@ -5,6 +5,7 @@ import i18n from '~/plugins/i18n'
 import App from '~/components/App'
 import Echo from "laravel-echo"
 import '@trevoreyre/autocomplete-vue/dist/style.css'
+import VueSocialauth from 'vue-social-auth'
 
 import '~/plugins'
 import '~/components'
@@ -12,6 +13,16 @@ import '~/components'
 window.axios = require('axios');
 
 Vue.config.productionTip = false
+
+Vue.use(VueSocialauth, {
+
+    providers: {
+        facebook: {
+            clientId: '485924195720970',
+            redirectUri: '/auth/facebook/callback'
+        }
+    }
+})
 
 window.Pusher = require('pusher-js');
 

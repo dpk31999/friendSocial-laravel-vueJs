@@ -34,6 +34,12 @@ export default [
             { path: 'interests', name: 'settings.interests', component: page('settings/interests.vue') }
         ]
     },
+    {
+        path: '/auth/:provider/callback',
+        component: {
+            template: '<div class="auth-component"></div>'
+        }
+    },
 
     { path: '*', name: 'notFound', component: page('errors/404.vue') }
 ]

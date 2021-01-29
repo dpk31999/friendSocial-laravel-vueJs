@@ -96,7 +96,7 @@
             <span>
               <img
                 class="icon"
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/X_t0JnueVu-.png"
+                src="/storage/icon/home2.png"
                 alt
               />
               Sống tại
@@ -109,7 +109,7 @@
             <span>
               <img
                 class="icon"
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/yB/r/ODICuZSjkMe.png"
+                src="/storage/icon/birthday.png"
                 alt
               />
               Sinh ngày
@@ -122,7 +122,7 @@
             <span>
               <img
                 class="icon"
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/S0aTxIHuoYO.png"
+                src="/storage/icon/status.png"
                 alt
               />
               Trạng thái
@@ -136,7 +136,7 @@
             <span>
               <img
                 class="icon"
-                src="https://img.icons8.com/wired/64/000000/email.png"
+                src="/storage/icon/email.png"
               />
               Email
               <span class="font-weight-bold">{{ userCurrent.email }}</span>
@@ -146,7 +146,7 @@
             <span>
               <img
                 class="icon"
-                src="https://img.icons8.com/material-outlined/48/000000/phone.png"
+                src="/storage/icon/phone.png"
               />
               Số điện thoại
               <span class="font-weight-bold">{{ userCurrent.phone }}</span>
@@ -156,7 +156,7 @@
             <span>
               <img
                 class="icon"
-                src="https://img.icons8.com/metro/26/000000/facebook-new.png"
+                src="/storage/icon/fb.png"
               />
               Facebook
               <span class="font-weight-bold"
@@ -209,7 +209,7 @@
                 >
                   <span>
                     <img
-                      src="https://img.icons8.com/plasticine/100/000000/image.png"
+                      src="/storage/icon/image.png"
                       width="30px"
                     /> </span
                   >Chọn ảnh
@@ -256,13 +256,13 @@
               <div v-if="user.id == userCurrent.id" class="icon-post">
                 <img
                   style="cursor: pointer"
-                  src="https://img.icons8.com/cute-clipart/50/000000/edit.png"
+                  src="/storage/icon/edit.png"
                   @click="selectEditPost(post, index)"
                   width="30px"
                 />
                 <img
                   style="cursor: pointer"
-                  src="https://img.icons8.com/flat_round/50/000000/delete-sign.png"
+                  src="/storage/icon/delete-sign.png"
                   @click="deletePost(post.id, index)"
                   width="30px"
                 />

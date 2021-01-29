@@ -64,7 +64,7 @@
               class="item-header btn btn-outline-secondary ml-2"
             >
               <img
-                src="https://img.icons8.com/dusk/64/000000/home.png"
+                src="/storage/icon/home.png"
                 width="25px"
               />
               Trang chủ
@@ -81,7 +81,7 @@
               class="item-header btn btn-outline-secondary ml-2"
             >
               <img
-                src="https://img.icons8.com/dusk/64/000000/messaging-.png"
+                src="/storage/icon/messaging.png"
                 width="25px"
               />
               Tin nhắn
@@ -90,14 +90,6 @@
                 >)</span
               >
             </router-link>
-            <div class="item-header btn btn-outline-secondary ml-2">
-              <img
-                src="https://img.icons8.com/dusk/64/000000/hearts.png"
-                width="25px"
-              />
-              Thông báo
-              <span class="pending">(2)</span>
-            </div>
           </div>
           <li v-if="user" class="nav-item dropdown">
             <a

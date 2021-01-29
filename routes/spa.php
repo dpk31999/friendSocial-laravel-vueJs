@@ -14,3 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('{path}', 'SpaController')->where('path', '(.*)');
+
+Route::post('sociallogin/{provider}', 'Auth\SocialController@SocialSignup');
+Route::get('auth/{provider}/callback', 'Auth\OutController@index')->where('provider', '.*');
