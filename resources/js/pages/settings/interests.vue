@@ -57,22 +57,22 @@ export default {
   }),
 
   methods: {
-      target(id){
-          if(!this.chose.includes(id))
-          {
-            this.chose.push(id)
-          }
-          else{
-              const index = this.chose.indexOf(id)
-              if (index > -1) {
-                this.chose.splice(index, 1);
-                }
-          }
-      },
+    target(id){
+      if(!this.chose.includes(id))
+      {
+        this.chose.push(id)
+      }
+      else{
+        const index = this.chose.indexOf(id)
+        if (index > -1) {
+          this.chose.splice(index, 1);
+        }
+      }
+    },
 
-      checkInterest(id){
-          return this.checked.includes(id)
-      },
+    checkInterest(id){
+        return this.checked.includes(id)
+    },
 
     getInterest() {
       axios
